@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart'; 
 import 'package:task1/src/constant/dark_theme.dart';
+import 'package:task1/src/feature/bottomnavigation_bar/bottom_naviagtion_bar.dart';
 import 'package:task1/src/feature/mapview/widgets/dayinfo_widget.dart'; 
 
 void main() async {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: DarkTheme.theme,
-      home:Myclinder()
+      home:CustomBottomNavBar()
     );
   }
 
