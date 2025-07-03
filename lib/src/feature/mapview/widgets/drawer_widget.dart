@@ -5,7 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task1/src/constant/app_color.dart';
 
 import 'package:task1/src/constant/textstyle.dart';
-import 'package:task1/src/feature/Home/widgets/avatar.dart';
+
+import 'package:task1/src/feature/mapview/widgets/avatar.dart' show BlurAvatar;
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -27,8 +28,7 @@ class CustomDrawer extends StatelessWidget {
               ),
         
 
-           // Positioned.fill(
-            //  child: 
+           
               SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +48,7 @@ class CustomDrawer extends StatelessWidget {
                         Icon(Icons.star, color: AppColors.ratingStar, size: 20),
                         Icon(Icons.star_half, color: AppColors.ratingStar, size: 20),
                         SizedBox(width: 4),
-                        Text("5.0", style: TextStyle(color: Colors.white)),
+                        Text("4.5", style: TextStyle(color: Colors.white)),
                       ],
                     ),
 
@@ -125,7 +125,7 @@ class CustomDrawer extends StatelessWidget {
                   ],
                 ),
               ),
-           // ),
+          
           ],
         ),
       ),

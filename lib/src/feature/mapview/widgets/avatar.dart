@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class BlurAvatar extends StatelessWidget {
@@ -9,24 +8,20 @@ class BlurAvatar extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-      
         Container(
-          width: 185, 
+          width: 185,
           height: 185,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            
-             boxShadow: [
-    BoxShadow(
-      color: Colors.blue.withOpacity(0.6),
-      blurRadius: 10,
-      spreadRadius: 04,
-    ),
-  ],
 
-          
+            boxShadow: [
+              BoxShadow(
+                color: Colors.blue.withOpacity(0.6),
+                blurRadius: 10,
+                spreadRadius: 04,
+              ),
+            ],
           ),
-     
         ),
 
         Container(
