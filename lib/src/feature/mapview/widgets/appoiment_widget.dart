@@ -13,11 +13,11 @@ class AppointmentListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 180,
+      top: 80,
       left: 0,
       right: 0,
       child: SizedBox(
-        height: 170,
+        height: 150,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -29,8 +29,8 @@ class AppointmentListWidget extends StatelessWidget {
             return Align(
               alignment: Alignment.topCenter,
               child: Container(
-                height: hasStatus ? 170 : 140,
-                width: 100,
+                height: hasStatus ? 140 : 115,
+                width: 75,
                 margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
@@ -48,7 +48,7 @@ class AppointmentListWidget extends StatelessWidget {
                     const SizedBox(height: 6),
                     CircleAvatar(
                       backgroundImage: AssetImage(data.image),
-                      radius: 40,
+                      radius: 30,
                     ),
                     const SizedBox(height: 6),
                     

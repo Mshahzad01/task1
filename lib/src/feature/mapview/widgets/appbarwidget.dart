@@ -11,12 +11,17 @@ class Appbarwidget extends StatelessWidget implements PreferredSizeWidget {
 
  
 
-  final AppBarInfoModel info;
 
-   const Appbarwidget({super.key, required this.info});
+  const Appbarwidget({super.key,});
+
+  
+
 
   @override
   Widget build(BuildContext context) {
+
+    final List<AppBarInfoModel> data = userinfo;
+
     return AppBar(
       backgroundColor: Colors.black.withOpacity(0.6),
       elevation: 0,
@@ -27,14 +32,14 @@ class Appbarwidget extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {
             Scaffold.of(context).openDrawer();
           },
-          icon: SvgPicture.asset("assets/icon/drawer.svg"),
+          icon: SvgPicture.asset("assets/icon/drawer.svg",width: 16,height:16,),
         ),
       ),
 
       title: Column(
         children: [
           Text('Forecast Daily Earnings', style: AppTextStyles.appbartitle),
-          Text('\$${info.earnings}', style: AppTextStyles.appbartitle),
+          Text('\$${data[0].earnings}', style: AppTextStyles.appbartitle3),
         ],
       ),
       centerTitle: true,
@@ -43,8 +48,8 @@ class Appbarwidget extends StatelessWidget implements PreferredSizeWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Total Clients', style: AppTextStyles.appbartitle),
-            Text(info.totalClients, style: AppTextStyles.appbartitle),
+            Text('Total Clients', style: AppTextStyles.appbartitle2),
+            Text("${data[0].totalClients}", style: AppTextStyles.appbartitle3),
           ],
         ),
         const SizedBox(width: 10),

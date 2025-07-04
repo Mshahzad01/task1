@@ -113,7 +113,7 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
     return TextSpan(
       text: day.toString(),
       style: TextStyle(
-        fontSize: 10,
+        fontSize: 08,
         color: isToday ? Colors.orange : Colors.white,
       ),
       children: [
@@ -124,7 +124,7 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
             child: Text(
               suffix,
               style: TextStyle(
-                fontSize: 8,
+                fontSize: 06,
                 color: isToday ? Colors.orange : Colors.white,
               ),
             ),
@@ -150,9 +150,9 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
               currentMonth,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
+               // decoration: TextDecoration.underline,
               ),
             ),
           ),
@@ -163,7 +163,7 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
             color: Colors.white30,
           ),
 
-          const SizedBox(width: 10),
+          const SizedBox(width: 05),
 
           Expanded(
             child: ListView.builder(
@@ -184,7 +184,7 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
                     }
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 06),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -192,7 +192,7 @@ class _AutoMonthUpdateScrollerState extends State<AutoMonthUpdateScroller> {
                           dayName,
                           style: const TextStyle(color: Colors.white, fontSize: 12),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 02),
                         RichText(
                           text: formatDayWithSuperscript(date.day, isToday),
                         ),

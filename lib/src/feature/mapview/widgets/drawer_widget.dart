@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task1/src/constant/app_color.dart';
 
 import 'package:task1/src/constant/textstyle.dart';
+import 'package:task1/src/feature/mapview/model/usersinfo_model.dart';
 
 import 'package:task1/src/feature/mapview/widgets/avatar.dart' show BlurAvatar;
 
@@ -13,6 +14,9 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+   final  List<UsersinfoModel>  userinfo = userinformation;
     return Drawer(
       backgroundColor: Colors.transparent,
       child: SafeArea(
@@ -33,6 +37,9 @@ class CustomDrawer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+
+
+                    
                     const SizedBox(height: 16),
                     Text("🎗️Free Account Member", style: AppTextStyles.title),
                     const SizedBox(height: 26),
@@ -48,16 +55,16 @@ class CustomDrawer extends StatelessWidget {
                         Icon(Icons.star, color: AppColors.ratingStar, size: 20),
                         Icon(Icons.star_half, color: AppColors.ratingStar, size: 20),
                         SizedBox(width: 4),
-                        Text("4.5", style: TextStyle(color: Colors.white)),
+                        Text('4.5', style: TextStyle(color: Colors.white)),
                       ],
                     ),
 
                     const SizedBox(height: 4),
-                    Text("Since July 2020", style: AppTextStyles.subtitle),
+                    Text('${userinfo[0].createdat}', style: AppTextStyles.subtitle),
                     const SizedBox(height: 8),
-                    Text("MJ Lee", style: AppTextStyles.name),
-                    Text("Private Driver", style: AppTextStyles.role),
-                    Text("Bondi Beach, NSW, Australia", style: AppTextStyles.location),
+                    Text('${userinfo[0].name}' ,style: AppTextStyles.name),
+                    Text('${userinfo[0].drivertype}', style: AppTextStyles.role),
+                    Text('${userinfo[0].address}', style: AppTextStyles.location),
 
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -144,7 +151,7 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(icon, color: AppColors.primaryText, size: 28),
+                Icon(icon, color: AppColors.white, size: 28),
                 const SizedBox(height: 8),
                 Text(label, style: AppTextStyles.drawerButton),
               ],
@@ -159,7 +166,7 @@ class CustomDrawer extends StatelessWidget {
                 child: Text(
                   '$count',
                   style: const TextStyle(
-                    color: AppColors.primaryText,
+                    color: AppColors.white,
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                   ),

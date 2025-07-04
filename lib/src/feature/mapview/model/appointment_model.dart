@@ -8,7 +8,7 @@ enum BookingStatus {
 
   String get title => switch (this) {
     pending => 'Pending',
-    inProgress => 'In Progress',
+    inProgress => 'Progress',
     completed => 'Completed',
   };
 
@@ -18,6 +18,10 @@ enum BookingStatus {
     completed => Colors.green,
   };
 }
+
+
+
+
 
 class AppointmentModel {
   final String? status;
@@ -35,11 +39,13 @@ class AppointmentModel {
      //  DateFormat('Hms', 'en_US').parse('14:23:01');
   static List<AppointmentModel> dummyData = [
     AppointmentModel(
+     // status:'panding',
       image: 'assets/image/i (3).png',
       time:  DateTime.now(),
       bookingStatus: BookingStatus.inProgress,
     ),
     AppointmentModel(
+      status: '',
       image: 'assets/image/i (2).png',
       time:  DateTime.now(),
       bookingStatus: BookingStatus.pending,

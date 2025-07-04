@@ -77,7 +77,7 @@ class _WorldMapWidgetState extends State<WorldMapWidget> {
           },
           initialCameraPosition: CameraPosition(
             target: _initialPosition,
-            zoom: 1.0,
+            zoom: 2.0,
           ),
      
           
