@@ -6,14 +6,16 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:task1/src/constant/app_color.dart';
 import 'package:task1/src/constant/asset_string.dart';
 import 'package:task1/src/constant/textstyle.dart';
+import 'package:task1/src/feature/booking/screen/booking_details_screen.dart';
 import 'package:task1/src/feature/booking/screen/booking_screen.dart';
 import 'package:task1/src/feature/mapview/model/quotes_model.dart';
 import 'package:task1/src/feature/mapview/widgets/appbarwidget.dart';
 import 'package:task1/src/feature/mapview/widgets/drawer_widget.dart';
+import 'package:task1/src/feature/message/screen/message_screen.dart';
 
 import '../dashbord/screen/dashborad_screen.dart';
 import '../mapview/screen/map_view_screen.dart';
-import '../mapview/screen/settingscreen.dart';
+
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
@@ -28,9 +30,11 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   final List<Widget> _screens = [
     DashboardScreen(),
     MapViewscreen(),
-    DashboardScreen(),
-    Settingscreen(),
     BookingScreen(),
+        BookingScreen(),
+  //BookingDetailScreen(),
+    MessageScreen(),
+  
   ];
 
   @override
@@ -105,54 +109,68 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     );
   }
 
-  // ignore: non_constant_identifier_names
-  Widget CustomBottombar() {
-    return SalomonBottomBar(
-      itemPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-      backgroundColor: Colors.black.withOpacity(0.8),
-      currentIndex: _currentIndex,
-      onTap: (index) {
-        setState(() => _currentIndex = index);
-      },
-      items: [
-        SalomonBottomBarItem(
-          icon: SvgPicture.asset(AssetString.bottomone, height: 22, width: 22),
-          title: Text("Dashboard", style: AppTextStyles.bottombar),
-          selectedColor: AppColors.bottombarcolor,
-        ),
 
-        SalomonBottomBarItem(
-          icon: SvgPicture.asset(AssetString.bottomtwo, height: 24, width: 24),
-          title: Text("MapView", style: AppTextStyles.bottombar),
-          selectedColor: AppColors.bottombarcolor,
-        ),
 
-        SalomonBottomBarItem(
-          icon: SvgPicture.asset(
-            AssetString.bottomThree,
-            height: 24,
-            width: 24,
-          ),
-          title: Text("job", style: AppTextStyles.bottombar),
-          selectedColor: AppColors.bottombarcolor,
+Widget CustomBottombar() {
+  return SalomonBottomBar(
+    itemPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+    backgroundColor: Colors.black.withOpacity(0.8),
+    currentIndex: _currentIndex,
+    onTap: (index) {
+      setState(() => _currentIndex = index);
+    },
+    items: [
+      SalomonBottomBarItem(
+        icon: SvgPicture.asset(
+          AssetString.bottomone,
+          height: 22,
+          width: 22,
+          color: _currentIndex == 0 ? AppColors.bottombarcolor : Colors.grey,
         ),
-
-        SalomonBottomBarItem(
-          icon: SvgPicture.asset(
-            AssetString.bottomfoure,
-            height: 24,
-            width: 24,
-          ),
-          title: Text("Booking", style: AppTextStyles.bottombar),
-          selectedColor: AppColors.bottombarcolor,
+        title: Text("Dashboard", style: AppTextStyles.bottombar),
+        selectedColor: AppColors.bottombarcolor,
+      ),
+      SalomonBottomBarItem(
+        icon: SvgPicture.asset(
+          AssetString.bottomtwo,
+          height: 24,
+          width: 24,
+          color: _currentIndex == 1 ? AppColors.bottombarcolor : Colors.grey,
         ),
-
-        SalomonBottomBarItem(
-          icon: SvgPicture.asset(AssetString.bottomfive, height: 24, width: 24),
-          title: Text("Request", style: AppTextStyles.bottombar),
-          selectedColor: AppColors.bottombarcolor,
+        title: Text("MapView", style: AppTextStyles.bottombar),
+        selectedColor: AppColors.bottombarcolor,
+      ),
+      SalomonBottomBarItem(
+        icon: SvgPicture.asset(
+          AssetString.bottomThree,
+          height: 24,
+          width: 24,
+          color: _currentIndex == 2 ? AppColors.bottombarcolor : Colors.grey,
         ),
-      ],
-    );
-  }
+        title: Text("Job", style: AppTextStyles.bottombar),
+        selectedColor: AppColors.bottombarcolor,
+      ),
+      SalomonBottomBarItem(
+        icon: SvgPicture.asset(
+          AssetString.bottomfoure,
+          height: 24,
+          width: 24,
+          color: _currentIndex == 3 ? AppColors.bottombarcolor : Colors.grey,
+        ),
+        title: Text("Booking", style: AppTextStyles.bottombar),
+        selectedColor: AppColors.bottombarcolor,
+      ),
+      SalomonBottomBarItem(
+        icon: SvgPicture.asset(
+          AssetString.bottomfive,
+          height: 24,
+          width: 24,
+          color: _currentIndex == 4 ? AppColors.bottombarcolor : Colors.grey,
+        ),
+        title: Text("Request", style: AppTextStyles.bottombar),
+        selectedColor: AppColors.bottombarcolor,
+      ),
+    ],
+  );
+}
 }

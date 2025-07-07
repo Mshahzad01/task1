@@ -14,7 +14,7 @@ class DarkTheme {
       iconTheme: const IconThemeData(color: Colors.white),
       textTheme: const TextTheme(
         bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(color: Colors.white70),
+        bodyMedium: TextStyle(color: Colors.white,fontFamily: 'Myfonts'),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.white12,

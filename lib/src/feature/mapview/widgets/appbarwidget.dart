@@ -1,25 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task1/src/constant/asset_string.dart';
 import 'package:task1/src/constant/textstyle.dart';
 
 import '../model/appbarmodel.dart';
 
-
-
 class Appbarwidget extends StatelessWidget implements PreferredSizeWidget {
-
- 
-
-
-  const Appbarwidget({super.key,});
-
-  
-
+  const Appbarwidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final List<AppBarInfoModel> data = userinfo;
 
     return AppBar(
@@ -32,7 +22,11 @@ class Appbarwidget extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {
             Scaffold.of(context).openDrawer();
           },
-          icon: SvgPicture.asset("assets/icon/drawer.svg",width: 16,height:16,),
+          icon: SvgPicture.asset(
+            AssetString.drawericon,
+            width: 16,
+            height: 16,
+          ),
         ),
       ),
 

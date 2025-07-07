@@ -8,18 +8,13 @@ class AppBarInfoModel {
     required this.totalClients,
   });
 
-  // factory AppBarInfoModel.fromMap(Map<String, dynamic> map) {
-  //   return AppBarInfoModel(
-  //     earnings: map['earnings'] ?? '0',
-  //     totalClients: map['totalClients'] ?? '0',
-  //   );
-  // }
+
 }
 
 
 
 
-//data
+//app bar data for users information 
 
 List<AppBarInfoModel>  userinfo = [
 

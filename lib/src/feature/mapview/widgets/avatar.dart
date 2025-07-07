@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task1/src/constant/asset_string.dart';
 
 class BlurAvatar extends StatelessWidget {
   const BlurAvatar({super.key});
@@ -32,9 +33,9 @@ class BlurAvatar extends StatelessWidget {
             color: Colors.white,
             shape: BoxShape.circle,
           ),
-          child: const CircleAvatar(
+          child: CircleAvatar(
             radius: 48,
-            backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
+            backgroundImage: AssetImage(AssetString.userimage),
           ),
         ),
       ],

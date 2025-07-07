@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task1/src/constant/app_color.dart';
 
 import 'package:task1/src/constant/textstyle.dart';
+import 'package:task1/src/core/enum/drawer_button_enum.dart';
 import 'package:task1/src/feature/mapview/model/usersinfo_model.dart';
 
 import 'package:task1/src/feature/mapview/widgets/avatar.dart' show BlurAvatar;
@@ -76,16 +77,16 @@ class CustomDrawer extends StatelessWidget {
                         crossAxisSpacing: 16,
                         mainAxisSpacing: 16,
                         children: [
-                          _buildDrawerButton(Icons.add, "Create"),
-                          _buildDrawerButton(Icons.schedule, "Schedule"),
-                          _buildDrawerButton(Icons.people, "Clients", count: 256),
-                          _buildDrawerButton(Icons.message, "Messages"),
-                          _buildDrawerButton(Icons.receipt_long, "Invoices"),
-                          _buildDrawerButton(Icons.business_center, "Business"),
-                          _buildDrawerButton(Icons.settings, "Settings"),
-                          _buildDrawerButton(Icons.headset_mic, "Support"),
-                          _buildDrawerButton(Icons.person_pin_circle, "Nearby"),
-                          _buildDrawerButton(Icons.shortcut, "Shortcut"),
+                          _buildDrawerButton(infobutton.Create.icondata,infobutton.Create.title ),
+                          _buildDrawerButton(infobutton.Schedule.icondata, infobutton.Schedule.title),
+                          _buildDrawerButton(infobutton.Clients.icondata, infobutton.Clients.title, count: 256),
+                          _buildDrawerButton(infobutton.Messages.icondata,infobutton.Messages.title),
+                          _buildDrawerButton(infobutton.Invoices.icondata, infobutton.Invoices.title),
+                           _buildDrawerButton(infobutton.Business.icondata, infobutton.Business.title),
+                          _buildDrawerButton(infobutton.Settings.icondata, infobutton.Settings.title),
+                           _buildDrawerButton(infobutton.Support.icondata, infobutton.Support.title),
+                          _buildDrawerButton(infobutton.Nearby.icondata, infobutton.Nearby.title),
+                          _buildDrawerButton(infobutton.Shortcut.icondata, infobutton.Shortcut.title),
                         ],
                       ),
                     ),
